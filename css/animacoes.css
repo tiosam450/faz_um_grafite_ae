@@ -1,0 +1,121 @@
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+  }
+  
+  [data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+  }
+  
+  [data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+  }
+  
+  [data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+  }
+
+  [data-anime="top_2"] {
+    transform: translate3d(0, -50px, 0);
+    transition: 2s;
+  }
+
+  [data-anime="top_3"] {
+    transform: translate3d(0, -50px, 0);
+    transition: 2.5s;
+  }
+  
+  [data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  @media (max-width:600px) {
+    [data-anime1] {
+      opacity: 0;
+      transition: 1s;
+    }
+
+    [data-anime1="left_1"] {
+      transform: translate3d(-50px, 0, 0);
+    }
+
+    [data-anim1="troca_cor_1"] {
+      filter: saturate(0);
+      opacity: 0;
+      transition: 5s;
+    }
+  
+    [data-anime1="troca_cor_2"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_3"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_4"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_5"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_6"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_7"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_9"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_10"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_11"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_12"] {
+      filter: saturate(0);
+      opacity: 0;
+  
+    }
+  
+    [data-anime1="troca_cor_13"] {
+      filter: saturate(0);
+      opacity: 0.5;
+  
+    }
+  
+    [data-anime1].animate {
+      opacity: 1;
+      transform: translate3d(0px, 0px, 0px);
+      filter: saturate(1);
+    }
+  }
+  

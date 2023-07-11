@@ -1,0 +1,429 @@
+:root {
+    --azul: #1c3c72;
+    --cinza: #616161;
+    --gradienteAzul: linear-gradient(45deg, #1b5183, #2bc6e1);
+}
+
+p {
+    color: var(--cinza);
+    font-size: 1.1em;
+    letter-spacing: .05em;
+    line-height: 1.4em;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--cinza);
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+.grid{
+    width: 1400px;
+}
+
+@media (max-width:1360px) {
+    p {
+        font-size: .9em;
+        letter-spacing: .05em;
+        line-height: 1.4em;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .grid{
+        width: 900px;
+    }
+}
+
+/* ANIMAÇÔES */
+@keyframes balanco {
+    from {
+      transform: rotate(5deg);
+    }
+    to {
+      transform: rotate(-5deg);
+    }
+}
+
+/* MENU */
+header{
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu img{
+    margin: 20px 30px;
+    height: 60px;
+    transition: .3s ease-in-out;
+}
+
+.menu img:hover{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px;
+}
+
+.menu li a{
+    padding: 0 20px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    animation: hoverLink 5s ease-in-out infinite;
+    color: rgba(122, 122, 122);
+}
+
+.menu li a:hover{
+    transform: scale(1.03);
+    transition: .3s ease-in-out;
+    background: linear-gradient(270deg, #810d9d, #00caf5, #c3ff01);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip:text;
+    color:rgba(0,0,0,0);
+    animation: hoverLink 5s ease-in-out infinite;
+}
+
+@keyframes hoverLink{
+    0%{background-position:left}
+    50%{background-position:right}
+    100%{background-position:left}
+}
+
+.icone_menu_mobile{
+    display: none;
+    width: 30px;
+}
+
+@media (max-width: 1360px) {
+    .menu img{
+        margin: 15px 30px;
+        height: 40px;
+    }
+    .menu li a{
+        font-size: .9em;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu img{
+        margin: 15px 30px;
+        height: 25px;
+    }
+}
+
+.containerInfoArtista{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* FOTO ARTE ARTISTAS */
+
+.fotoArteElvis{
+    width: 100%;
+    height: 500px;
+    background: url(../img/elvis_artista.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.fotoArteElvis:hover{
+    background: url(../img/arte_elvis_black_1080px.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+}
+
+.fotoArteEnivo{
+    width: 100%;
+    height: 500px;
+    background: url(../img/enivo_artista.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.fotoArteEnivo:hover{
+    background: url(../img/arte_enivo_black_1080px.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+}
+
+.fotoArteTarik{
+    width: 100%;
+    height: 500px;
+    background: url(../img/tarik_artista.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.fotoArteTarik:hover{
+    background: url(../img/arte_tarik_black_1080px.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+}
+
+.fotoArteBinho{
+    width: 100%;
+    height: 500px;
+    background: url(../img/binho_artista.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.fotoArteBinho:hover{
+    background: url(../img/arte_binho_black_1080px.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+}
+
+.fotoArteShn{
+    width: 100%;
+    height: 500px;
+    background: url(../img/SHN_artista.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.fotoArteShn:hover{
+    background: url(../img/arte_shn_2.jpg) no-repeat center;
+    background-size: contain;
+    transition: .5s ease-in-out;
+}
+
+/* TEXTO */
+
+.textoArtista{
+    width: 100%;
+    padding-left: 60px;
+}
+
+/* ELEMENTOS */
+
+.spray{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+}
+
+.seta{
+    position: absolute;
+    bottom: 0px;
+    left: -100px;
+    width: 20%;
+}
+
+@media (max-width: 900px) {
+    .containerInfoArtista{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -10px 0 100px
+    }
+
+    .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .info h1{
+        margin-top: 60px;
+    }
+
+    .spray{
+        display: none;
+    }
+    
+    .seta{
+        position: absolute;
+        bottom: -100px;
+        left: -80px;
+        width: 50%;
+    }
+
+    .textoArtista{
+        width: 100%;
+        padding-left: 0px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .containerRodape{
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .containerInfoArtista{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px
+    }
+
+    .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .info h1{
+        margin-top: 10px;
+    }
+
+    .spray{
+        display: none;
+    }
+    
+    .seta{
+        position: absolute;
+        bottom: -60px;
+        left: -80px;
+        width: 50%;
+    }
+
+    .textoArtista{
+        width: 100%;
+        padding-left: 0px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .containerRodape{
+        position: relative;
+    }
+}
+
+@media (max-width: 350px) {
+    .containerInfoArtista{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px
+    }
+
+    .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .info h1{
+        margin-top: 0px;
+    }
+
+    .fotoArteElvis{
+        margin-bottom: -30px;
+    }
+
+    .spray{
+        display: none;
+    }
+    
+    .seta{
+        position: absolute;
+        bottom: -50px;
+        left: -80px;
+        width: 50%;
+    }
+
+    .textoArtista{
+        width: 100%;
+        padding-left: 0px;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .containerRodape{
+        position: relative;
+    }
+}
+
+
+/* RODAPÉ */
+.containerRodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(26, 26, 26);
+}
+
+.containerRodape p{
+    color: rgb(124, 124, 124);
+    margin: 0;
+    padding: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+@media (max-width: 1360px) {
+    .containerRodape p{
+        font-size: .7em;
+
+    }
+}
+
+@media (max-width: 700px) {
+    .containerRodape p{
+        padding: 20px;
+        font-size: .7em;
+
+    }
+}
